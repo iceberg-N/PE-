@@ -132,3 +132,14 @@ int main() {
 
 
 ```
+
+分配内存时也可以用
+
+```C++
+// 分配内存
+buffer = (char*)VirtualAlloc(NULL, imageLength, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+
+// 释放内存
+VirtualFree(buffer, 0, MEM_RELEASE);
+
+```
